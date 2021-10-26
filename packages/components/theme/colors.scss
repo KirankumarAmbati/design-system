@@ -1,0 +1,68 @@
+$primary: #319795;
+$secondary: black;
+$tertiary: #d0d4da;
+
+$success: #0a8b35;
+$success-light: #c6f7d4;
+
+$info: #2093d6;
+$info-light: #bde4f8;
+
+$warning: #ed8f24;
+$warning-light: #feecc8;
+
+$error: #ed3b44;
+$error-light: #fed6d7;
+
+.-primary {
+    background-color: $primary;
+    color: white;
+}
+
+.-secondary {
+    color: black;
+}
+
+.-tertiary {
+    background-color: $tertiary;
+}
+
+.-success {
+    background-color: $success;
+    color: white;
+}
+
+.-info {
+    background-color: $info;
+    color: white;
+}
+
+.-warning {
+    background-color: $warning;
+    color: white;
+}
+
+.-error {
+    background-color: $error;
+    color: white;
+}
+
+.-success-light {
+    background-color: $success-light;
+    color: black;
+}
+
+.-info-light {
+    background-color: $info-light;
+    color: black;
+}
+
+.-warning-light {
+    background-color: $warning-light;
+    color: black;
+}
+
+.-error-light {
+    background-color: $error-light;
+    color: black
+}

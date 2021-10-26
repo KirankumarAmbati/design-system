@@ -1,0 +1,12 @@
+@import "../../../theme/colors.scss";
+@import "../../../theme/font-sizes.scss";
+
+.button {
+    padding: 5px;
+    margin: 5px;
+    border: 0;
+}
+
+.disabled {
+    cursor: not-allowed;
+}

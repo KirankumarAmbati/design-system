@@ -1,0 +1,28 @@
+@import "../../../theme/colors.scss";
+
+.alert {
+    padding: 0 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        border: 0;
+        background-color: inherit;
+        color: inherit;
+    }
+
+    &.-secondary {
+        border: 1px solid lightgrey;
+    }
+
+    .message-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        p {
+            margin-inline-start: 10px;
+        }
+    }
+}
