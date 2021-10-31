@@ -3,19 +3,29 @@ import './styles.scss';
 const Button = ({
     variant = "primary",
     label,
-    size,
+    size = 'lg',
     onClick,
-    disabled,
-    loading,
-    loadingText
+    disabled = false,
+    loading = false,
+    loadingText,
+    bare = false,
 }) => {
+    if(!loadingText) {
+        loadingText = label;
+    }
+
     return <button
-        className={`button
-            -${variant}
+        className={`
+            button
             ${size}
-            ${loading || disabled ? 'disabled' : ''}`}
+            ${loading || disabled ? 'disabled' : ''}
+            ${bare ? `-${variant}-inverted bare` : `-${variant}`}
+        `}
         onClick={onClick}
         disabled={disabled || loading}
+        title={loading ? loadingText : label}
+        aria-label={loading ? loadingText : label}
+        aria-disabled={String(disabled || loading)}
     >
         {loading ? loadingText : label}
     </button >

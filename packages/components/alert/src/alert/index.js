@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faInfoCircle,
@@ -11,39 +12,43 @@ const Alert = ({
     variant,
     label,
 }) => {
+    const [isOpen, setIsOpen] = useState(true);
+
     let icon;
     switch (variant) {
         case 'warning':
+        case 'warning-light':
             icon = faExclamationCircle;
             break;
         case 'error':
+        case 'error-light':
             icon = faExclamationTriangle;
             break;
         case 'success':
+        case 'success-light':
             icon = faCheckCircle;
             break;
         case 'info':
+        case 'info-light':
         default:
             icon = faInfoCircle;
             break;
     }
-    return <div
+
+    return isOpen && <div
         className={`
             alert
             -${variant}
+            ${variant.includes('light') ? 'light' : ''}
         `}
     >
         <div className="message-container">
             <FontAwesomeIcon className='icon' icon={icon} />
             <p>{label}</p>
         </div>
-        <button
-            onClick={e => {
-                e.target.parentElement.parentElement.removeChild(e.target.parentElement)
-            }}
-        >
+        <button onClick={() => setIsOpen(false)}>
             X
-        </button>
+    </button>
     </div>
 }
 

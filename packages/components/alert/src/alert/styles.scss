@@ -1,4 +1,4 @@
-@import "../../../theme/colors.scss";
+@import "../../../theme/styles.scss";
 
 .alert {
     padding: 0 10px;
@@ -14,6 +14,10 @@
 
     &.-secondary {
         border: 1px solid lightgrey;
+    }
+
+    &.light {
+        border-inline-start: 3px solid;
     }
 
     .message-container {

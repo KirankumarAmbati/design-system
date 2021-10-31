@@ -19,12 +19,28 @@ $error-light: #fed6d7;
     color: white;
 }
 
+.-primary-inverted {
+    background-color: white;
+    color: $primary;
+}
+
 .-secondary {
+    background-color: white;
     color: black;
+}
+
+.-secondary-inverted {
+    background-color: black;
+    color: white;
 }
 
 .-tertiary {
     background-color: $tertiary;
+}
+
+.-tertiary-inverted {
+    background-color: white;
+    color: $tertiary;
 }
 
 .-success {
@@ -32,9 +48,29 @@ $error-light: #fed6d7;
     color: white;
 }
 
+.-success-inverted {
+    background-color: white;
+    color: $success;
+}
+
+.-success-light {
+    background-color: $success-light;
+    color: $success;
+}
+
 .-info {
     background-color: $info;
     color: white;
+}
+
+.-info-inverted {
+    background-color: white;
+    color: $info;
+}
+
+.-info-light {
+    background-color: $info-light;
+    color: $info;
 }
 
 .-warning {
@@ -42,27 +78,27 @@ $error-light: #fed6d7;
     color: white;
 }
 
+.-warning-inverted {
+    background-color: white;
+    color: $warning;
+}
+
+.-warning-light {
+    background-color: $warning-light;
+    color: $warning;
+}
+
 .-error {
     background-color: $error;
     color: white;
 }
 
-.-success-light {
-    background-color: $success-light;
-    color: black;
-}
-
-.-info-light {
-    background-color: $info-light;
-    color: black;
-}
-
-.-warning-light {
-    background-color: $warning-light;
-    color: black;
+.-error-inverted {
+    background-color: white;
+    color: $error;
 }
 
 .-error-light {
     background-color: $error-light;
-    color: black
+    color: $error
 }

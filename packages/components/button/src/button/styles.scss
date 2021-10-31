@@ -1,12 +1,17 @@
-@import "../../../theme/colors.scss";
-@import "../../../theme/font-sizes.scss";
+@import "../../../theme/styles.scss";
 
 .button {
-    padding: 5px;
-    margin: 5px;
     border: 0;
-}
+    padding: $xs-space $sm-space;
+    margin: 5px;
+    cursor: pointer;
 
-.disabled {
-    cursor: not-allowed;
+    &.disabled {
+        cursor: not-allowed;
+    }
+
+    &.bare {
+        border: 0;
+        background-color: white;
+    }
 }

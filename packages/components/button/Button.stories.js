@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonBare } from './src';
+import { Button } from './src';
 
 export default {
   title: 'Button',
@@ -11,8 +11,9 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Submit',
+  loading: true,
   onClick: () => alert(10),
-  size: 'md'
+  size: 'lg'
 };
 
 export const Secondary = Template.bind({});
@@ -57,11 +58,19 @@ Error.args = {
   variant: 'error'
 };
 
-const BareButton = (args) => <ButtonBare {...args} />;
-
-export const bare = BareButton.bind({});
+export const bare = Template.bind({});
 bare.args = {
   label: 'Submit',
   onClick: () => alert(10),
-  variant: 'primary'
+  variant: 'primary',
+  bare: true
+};
+
+export const ErrorBare = Template.bind({});
+
+ErrorBare.args = {
+  label: 'Submit',
+  onClick: () => alert(10),
+  variant: 'error',
+  bare: true
 };
