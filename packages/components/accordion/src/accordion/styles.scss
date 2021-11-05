@@ -1,0 +1,22 @@
+@import "../../../theme/styles.scss";
+
+.accordion {
+    border: 1px solid grey;
+    margin: $md-space;
+    padding: $md-space;
+    .header {
+        padding: $md-space;
+        border: 1px solid lightgrey;
+        cursor: pointer;
+
+        svg {
+            margin: 0 $sm-space;
+        }
+    }
+
+    .content {
+        margin: 0;
+        background-color: #ededed;
+        padding: $md-space;
+    }
+}
